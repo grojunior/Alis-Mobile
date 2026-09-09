@@ -104,7 +104,7 @@
 <body>
   <header>
     <span>🤖 Alis Mobile</span>
-    <span style="font-size: 11px; color: #888;">PWA Hub</span>
+    <span style="font-size: 11px; color: #888;">GitHub Hub</span>
   </header>
 
   <div id="chat-container">
@@ -118,6 +118,7 @@
   </div>
 
   <script>
+    // URL oficial do seu Apps Script (Certifique-se de que termina em /exec)
     const SCRIPT_URL = "https://script.google.com/macros/s/AKfycby8rYVwK8NP78v-ZPLPD1vg8Z2Bplh7MFYuGUo_8YQWskHwsORJz-q_DlwRR-Tlg6Iv/exec";
 
     document.getElementById("sendBtn").addEventListener("click", () => enviarTexto());
@@ -134,7 +135,7 @@
       if (!textoPersonalizado) input.value = "";
       
       const payload = {
-        origem: "chrome_extension",
+        origem: "github_pwa",
         message: {
           chat: { id: "mobile_pwa" },
           text: texto
@@ -164,7 +165,7 @@
       }
     }
 
-    // Ativação do microfone por voz
+    // Suporte a ditado por voz nativo do navegador do celular
     const micBtn = document.getElementById("micBtn");
     let recognition;
     
