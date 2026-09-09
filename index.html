@@ -85,6 +85,9 @@
       align-items: center;
       justify-content: center;
     }
+    button:active {
+      background-color: #005999;
+    }
     #micBtn {
       background-color: #333;
       font-size: 18px;
@@ -104,7 +107,7 @@
 <body>
   <header>
     <span>🤖 Alis Mobile</span>
-    <span style="font-size: 11px; color: #888;">GitHub Hub</span>
+    <span style="font-size: 11px; color: #888;">GitHub PWA</span>
   </header>
 
   <div id="chat-container">
@@ -118,7 +121,7 @@
   </div>
 
   <script>
-    // URL oficial do seu Apps Script (Certifique-se de que termina em /exec)
+    // URL oficial do Apps Script (Web App /exec)
     const SCRIPT_URL = "https://script.google.com/macros/s/AKfycby8rYVwK8NP78v-ZPLPD1vg8Z2Bplh7MFYuGUo_8YQWskHwsORJz-q_DlwRR-Tlg6Iv/exec";
 
     document.getElementById("sendBtn").addEventListener("click", () => enviarTexto());
